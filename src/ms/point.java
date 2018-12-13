@@ -62,4 +62,19 @@ public class point {
 		disConnectDB();
 		return true;
 	}
+	public boolean pointInfo(String id) {
+		connectDB();
+		String sql = "SELECT point FROM member";
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.executeLargeUpdate();
+			
+		}catch(SQLException e) {
+			e.printStackTrace();
+			return false;
+		}
+		disConnectDB();
+		return true;
+	}
 }
