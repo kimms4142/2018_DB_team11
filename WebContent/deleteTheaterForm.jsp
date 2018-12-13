@@ -13,7 +13,7 @@
 		<h2>theater 테이블에 레코드 삭제</h2>
 		<form method="post" action="deleteTheaterPro.jsp">
 			영화관 이름 : <input type="text" name="name"><br/>
-			<input type="submit" value="제거">
+			<input class="btn" type="submit" value="제거">
 		</form>
 	</div>
 </body>

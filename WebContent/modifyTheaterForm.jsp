@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>영화관  추가</title>
+<title>영화관  수정</title>
 <link type="text/css" rel="stylesheet" href="admin.css"/>
 </head>
 <body>
@@ -17,7 +17,7 @@
 			전화번호 : <input type="text" name="tel"><br/>
 			상영관 : <input type="text" name="room"><br/>
 			좌석 수 : <input type="text" name="seatnum"><br/>
-			<input type="submit" value="수정">
+			<input type="submit" value="수정" class="btn">
 		</form>
 	</div>
 </body>
