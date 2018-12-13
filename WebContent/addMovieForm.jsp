@@ -5,18 +5,21 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>영화 추가</title>
+<link type="text/css" rel="stylesheet" href="admin.css"/>
 </head>
 <body>
-	<h2>movie 테이블에 영화 추가</h2>
-	
-	<form method="post" action="addMoviePro.jsp">
-		영화 id : <input type="text" name="id"><br/>
-		영화 name : <input type="text" name="name"><br/>
-		영화 director : <input type="text" name="director"><br/>
-		영화 actor : <input type="text" name="actor"><br/>
-		영화 등급 : <input type="text" name="type"><br/>
-		영화 정보 : <input type="text" name="info"><br/>
-		<input type="submit" value="입력완료">
-	</form>
+	<div bgcolor="#a6a6a6" id="form">
+		<a href="admin.jsp"><img src="home.png" alt="home"/></a>
+		<h2>movie 테이블에 영화 추가</h2>
+		<form method="post" action="addMoviePro.jsp">
+			영화 id : <input type="text" name="id"><br/>
+			영화 name : <input type="text" name="name"><br/>
+			영화 director : <input type="text" name="director"><br/>
+			영화 actor : <input type="text" name="actor"><br/>
+			영화 등급 : <input type="text" name="type"><br/>
+			영화 정보 : <input type="text" name="info"><br/>
+			<input class="btn" type="submit" value="추가">
+		</form>
+	</div>
 </body>
 </html>

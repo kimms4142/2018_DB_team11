@@ -5,35 +5,39 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>영화 추가</title>
+<link type="text/css" rel="stylesheet" href="admin.css"/>
 </head>
 <body>
-	<form method="post" action="addMovieForm.jsp">
-		<input type="submit" value="영화추가">
-	</form>
-	<br />
-	<form method="post" action="modifyMovieForm.jsp">
-		<input type="submit" value="영화수정">
-	</form>
-	<br />
-	<form method="post" action="deleteMovieForm.jsp">
-		<input type="submit" value="영화삭제">
-	</form>
-	<br />
-	<form method="post" action="addTheaterForm.jsp">
-		<input type="submit" value="영화관추가">
-	</form>
-	<br />
-	<form method="post" action="modifyTheaterForm.jsp">
-		<input type="submit" value="영화관수정">
-	</form>
-	<br />
-	<form method="post" action="deleteTheaterForm.jsp">
-		<input type="submit" value="영화관삭제">
-	</form>
-	<br />
+	<div bgcolor="#a6a6a6" id="form">
+		<a href="start.jsp"><img src="home.png" alt="home"/></a>
+		<form method="post" action="addMovieForm.jsp">
+			<input type="submit" value="영화추가" class="btn">
+		</form>
+		
+		<form method="post" action="modifyMovieForm.jsp">
+			<input type="submit" value="영화수정" class="btn">
+		</form>
+		
+		<form method="post" action="deleteMovieForm.jsp">
+			<input type="submit" value="영화삭제" class="btn">
+		</form>
+		
+		<form method="post" action="addTheaterForm.jsp">
+			<input type="submit" value="영화관추가" class="btn">
+		</form>
+	
+		<form method="post" action="modifyTheaterForm.jsp">
+			<input type="submit" value="영화관수정" class="btn">
+		</form>
+	
+		<form method="post" action="deleteTheaterForm.jsp">
+			<input type="submit" value="영화관삭제" class="btn">
+		</form> 
+		
 		<form method="post" action="pointInfo.jsp">
-		<input type="submit" value="포인트 조회">
-	</form>
+			<input type="submit" value="포인트 조회" class="btn">
+		</form>
+	</div>
 
 	
 

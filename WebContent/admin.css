@@ -1,21 +1,24 @@
-#loginForm {
-	background-color:#A6A6A6;
+#form {
 	margin: auto;
-	border: 2px #66c2ff;
-	padding: 5% 2% 0px 2%;
+	border: 2px dotted #66c2ff;
+	padding: 3% 2% 2% 2%;
+	width: 350px;
+	height: 400px;
+	text-align: center;
+	margin-top: 10%;
+}
+#delete {
+	margin: auto;
+	border: 2px dotted #66c2ff;
+	padding: 3% 2% 2% 2%;
 	width: 350px;
 	height: 200px;
 	text-align: center;
 	margin-top: 10%;
 }
-
-#loginForm2 {
-	background-color:#A6A6A6;
-	margin: auto;
-	border: 2px #66c2ff;
-	width: 350px;
-	text-align: center;
-	margin-top: 10%;
+img {
+	width: 40px;
+	margin-bottom: 5px;
 }
 
 input {

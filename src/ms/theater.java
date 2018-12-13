@@ -46,6 +46,7 @@ public class theater {
 			}catch(SQLException sqle){
 			}
 	}
+	
 	public boolean register(String name, String address, String tel, String room, String seatnum) {
 		 connectDB();
 	       String  sql = "INSERT INTO theater VALUES (?, ?, ?, ?, ?)";
@@ -70,7 +71,7 @@ public class theater {
 	
 	public boolean modify(String name, String address, String tel, String room, String seatnum) {
 		 connectDB();
-	       String  sql = "UPDATE theater SET address = ?, tel = ?, room = ?, seatnum = ? WHERE name = ?";
+	       String  sql = "UPDATE theater SET address = ?, tel = ?, room = ?, seatnum = ? WHERE t_name = ?";
 	       
 	       try {
 	          pstmt = conn.prepareStatement(sql);
@@ -91,7 +92,7 @@ public class theater {
 	
 	public boolean delete(String name) {
 		connectDB();
-		String sql = "delete from theater where name = ?";
+		String sql = "delete from theater where t_name = ?";
 		try {
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, name);

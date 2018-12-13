@@ -5,13 +5,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>레코드 삭제</title>
+<link type="text/css" rel="stylesheet" href="admin.css"/>
 </head>
 <body>
-	<h2>movie 테이블에 레코드 삭제</h2>
-	
-	<form method="post" action="deleteMoviePro.jsp">
-		아이디 : <input type="text" name="id"><br/>
-		<input type="submit" value="입력완료">
-	</form>
+	<div bgcolor="#a6a6a6" id="delete">
+		<a href="admin.jsp"><img src="home.png" alt="home"/></a>
+		<h2>movie 테이블에 레코드 삭제</h2>
+		
+		<form method="post" action="deleteMoviePro.jsp">
+			아이디 : <input type="text" name="id"><br/>
+			<input type="submit" value="입력완료">
+		</form>
+	</div>
 </body>
 </html>
