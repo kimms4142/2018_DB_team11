@@ -168,10 +168,17 @@
 				<form id="useList" action="useHistory.jsp" method="post">
 					<button>이용내역 확인</button>
 				</form>
+				<form action="modify.jsp" method="post">
+					<button>개인정보 수정</button>
+				</form>
+				<form action="remove.jsp" method="post">
+					<button>회원 탈퇴</button>
+				</form>
 				<form action="logout.jsp" method="post">
 					<button>로그아웃</button>
 				</form>
 			</div>
+			<br><br><br><br><br>
 			<div id="addPoint">
 				<p>포인트 추가</p>
 				<form action="pointAdmin.jsp" method="post">

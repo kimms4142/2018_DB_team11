@@ -18,7 +18,7 @@ public class signup {
 	
 	
 	private void connectDB() {
-		this.jdbcUrl = "jdbc:mysql://localhost:3306/moviebooking";
+		this.jdbcUrl = "jdbc:mysql://localhost:3306/moviebooking?useSSL=false";
 		this.dbId = "kimms4142";
 		this.dbPass = "kimms4142";
 		
@@ -88,5 +88,47 @@ public class signup {
 		}
 		disConnectDB();	
 		return true;
+	}
+	
+	public void modify(String pw, String name, String birth, String address, String tel, String id) {
+		connectDB();
+		String sql = "UPDATE member SET pw = ?, name = ?, birth = ?, address = ?, tel = ? WHERE id = ?";
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, pw);
+			pstmt.setString(2, name);
+			pstmt.setString(3, birth);
+			pstmt.setString(4, address);
+			pstmt.setString(5, tel);
+			pstmt.setString(6,id);
+			pstmt.executeUpdate();
+			
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
+		disConnectDB();
+	}
+	
+	public void remove(String id) {
+		connectDB();
+		String sql = "alter table member drop primary key";
+		try{
+			pstmt = conn.prepareStatement(sql);
+			pstmt.executeQuery();
+		}
+		catch(SQLException e) {
+			e.printStackTrace();
+		}
+		sql = "alter table member drop ?";
+		try{
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1,  id);
+			pstmt.executeUpdate();
+		}
+		catch(SQLException e) {
+			e.printStackTrace();
+		}
+		disConnectDB();
 	}
 }

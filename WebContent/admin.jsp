@@ -1,6 +1,7 @@
 <%@ page language="java"  pageEncoding="EUC-KR"%>
 <%@ page import="java.sql.*" contentType="text/html;charset=euc-kr"%>
 <%
+	request.setCharacterEncoding("UTF-8");
 	
 	try {
 		String DB_URL = "jdbc:oracle:thin:@127.0.0.1:1521:DBSERVER";
