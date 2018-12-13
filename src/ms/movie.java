@@ -72,7 +72,7 @@ public class movie {
 	public boolean modify(String id, String name, String director, String actor, String type, String info) {
 
 		connectDB();
-		String sql = "UPDATE movie SET name = ?, director = ?, actor = ?, type = ?, info = ? WHERE id = ?";
+		String sql = "UPDATE movie SET name = ?, director = ?, actor = ?, type = ?, info = ? WHERE movie_id = ?";
 
 		try {
 			pstmt = conn.prepareStatement(sql);
@@ -93,7 +93,7 @@ public class movie {
 	}
 	public boolean delete(String id) {
 		connectDB();
-		String sql = "delete from movie where id = ?";
+		String sql = "delete from movie where movie_id = ?";
 		try {
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, id);
