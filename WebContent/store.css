@@ -1,0 +1,124 @@
+header {
+	background-image: url("../img/header.png");
+	background-repeat: repeat-x;
+	height: 175px;
+	padding-top: 35px;
+	text-align: center;
+}
+
+#headerLink:link, #headerLink:visited {
+	color: white;
+	font-size: 62px;
+	font-weight: bold;
+	font-family: "times new roman", "arial";
+	text-decoration: none;
+}
+
+h2 {
+	text-align: center;
+    width: 95%;
+    float: left;
+    height: 30px;
+}
+
+#content {
+	background-color: #B0B0B0;
+	height: 730px;
+    width: 100%;
+    float: left;
+}
+
+#movie {
+	margin-left : 100px;
+	width: 890px;
+	height: 520px;
+	float: left;
+	display: inline-block;
+}
+
+#useHistory {
+	width: 900px;
+	height: 520px;
+	float: left;
+}
+
+table  {
+	width: 750px;
+	margin: auto;
+	margin-top: 20px;
+	border: 1px solid black;
+}
+
+th {
+	padding: 5px;
+	background-color: #d9f2e6;
+	text-align: center;
+}
+
+#rightContent {
+	width: 350px;
+	float: right;
+}
+
+.movie {
+	border: 1px solid black;
+	width: 430px;
+	height: 330px;
+	float: left;
+	margin: 3px 5px;
+}
+
+img {
+	width: 200px;
+	height: 270px;
+	margin-top: 5px;
+	margin-left: 10px;
+}
+
+#storeLinkImg {
+	width: 50px;
+    height: 50px;
+    float: right;
+}
+
+.movie_room {
+	float: right;
+	width: 49%;
+	margin-left: 5px;
+}
+
+.product p {
+	width: 180px;
+}
+
+#aboutUser {
+	border: 1px solid black;
+	width: 300px;
+	height: 150px;
+	padding: 0px 0px 10px 10px;
+	margin: 10px;
+}
+
+#useList {
+	float: left;
+	margin-right: 5px;
+}
+
+#addPoint {
+	border: 1px solid black;
+	width: 300px;
+	height: 100px;
+	padding-left: 10px;
+	margin: 10px;
+}
+
+footer {
+	background-color: yellow;
+	width: 100%;
+	float: left;
+}
+
+footer p {
+	text-align: center;
+	font-style: italic;
+}

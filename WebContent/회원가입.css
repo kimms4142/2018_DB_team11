@@ -1,0 +1,27 @@
+#form {
+	margin: auto;
+	border: 2px dotted #66c2ff;
+	padding: 3% 2% 2% 2%;
+	width: 350px;
+	height: 200px;
+	text-align: center;
+	margin-top: 10%;
+}
+
+img {
+	width: 40px;
+	margin-bottom: 5px;
+}
+
+input {
+	margin:10px;
+}
+
+#btn {
+	width: 100px;
+	height: 30px;
+	color: white;
+	border-radius: 5px;
+	background-color: #66c2ff;
+	margin-top: 20px;
+}
