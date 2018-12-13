@@ -7,10 +7,10 @@
 <title>레코드 삭제</title>
 </head>
 <body>
-	<h2>movie 테이블에 레코드 삭제</h2>
+	<h2>theater 테이블에 레코드 삭제</h2>
 	
-	<form method="post" action="deleteMoviePro.jsp">
-		아이디 : <input type="text" name="id"><br/>
+	<form method="post" action="deleteTheaterPro.jsp">
+		영화관 이름 : <input type="text" name="name"><br/>
 		<input type="submit" value="입력완료">
 	</form>
 </body>

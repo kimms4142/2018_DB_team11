@@ -7,9 +7,9 @@
 <title>영화관  추가</title>
 </head>
 <body>
-	<h2>theater 테이블에 영화관 추가</h2>
+	<h2>theater 테이블에 영화관 수정</h2>
 	
-	<form method="post" action="addTheaterPro.jsp">
+	<form method="post" action="modifyTheaterPro.jsp">
 		영화관 이름 : <input type="text" name="name"><br/>
 		영화관 주소 : <input type="text" name="address"><br/>
 		전화번호 : <input type="text" name="tel"><br/>

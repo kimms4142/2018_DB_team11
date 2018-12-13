@@ -13,6 +13,6 @@
 	String seatnum = request.getParameter("seatnum");
 	
 	theater theater = new theater();
-	theater.register(name, address, tel, room, seatnum);
+	theater.modify(name, address, tel, room, seatnum);
 	
 %>

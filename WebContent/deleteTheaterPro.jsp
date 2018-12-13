@@ -7,12 +7,7 @@
 
 <%
 	String name = request.getParameter("name");
-	String address = request.getParameter("address");
-	String tel = request.getParameter("tel");
-	String room = request.getParameter("room");
-	String seatnum = request.getParameter("seatnum");
-	
 	theater theater = new theater();
-	theater.register(name, address, tel, room, seatnum);
+	theater.delete(name);
 	
 %>
