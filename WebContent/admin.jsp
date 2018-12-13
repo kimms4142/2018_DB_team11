@@ -2,12 +2,8 @@
 <%@ page import="java.sql.*" contentType="text/html;charset=euc-kr"%>
 <%@ page import="ms.signup" %>
 <%
-<<<<<<< HEAD
-	request.setCharacterEncoding("UTF-8");
-	
-=======
 
->>>>>>> 85adf06905b45846d38f2e95b769d0b96395635a
+	request.setCharacterEncoding("UTF-8");
 	try {
 		String DB_URL = "jdbc:mysql:http://localhost:8090/2018_DB_team11/moviebooking.jsp";
 		String DB_USER = "kimms4142";
