@@ -11,3 +11,7 @@
 	theater.delete(name);
 	
 %>
+<script>
+	alert("삭제되었습니다.");
+	location.href="admin.jsp";	// 처음 페이지로 이동
+</script>

@@ -17,7 +17,7 @@
 			전화번호 : <input type="text" name="tel"><br/>
 			상영관 : <input type="text" name="room"><br/>
 			좌석 수 : <input type="text" name="seatnum"><br/>
-			<input type="submit" value="제거">
+			<input class="btn" type="submit" value="추가">
 		</form>
 	</div>
 </body>
