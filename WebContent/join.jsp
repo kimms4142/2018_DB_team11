@@ -22,6 +22,7 @@
 			
 			<input id="btn" type="submit" value="가입">
 		</form>
+		
 	</div>
 </body>
 </html>

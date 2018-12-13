@@ -64,4 +64,29 @@ public class signup {
 	       disConnectDB();
 	       return true;
 	    }
+	 
+	//아이디, 비밀번호 검사
+	public boolean check(String id, String pw) {
+		connectDB();
+		String sql = "SELECT * FROM member WHERE (id = ?) and (pw = ?)";
+		rs = null;
+	
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, id);
+			pstmt.setString(2, pw);
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				return true;
+			}
+			return false;
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		disConnectDB();	
+		return true;
+	}
 }
