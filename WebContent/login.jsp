@@ -6,6 +6,7 @@
 	String ID = request.getParameter("ID");
 	String PW = request.getParameter("PW");
 	
+	
 	String directory = application.getRealPath("users");
 	String filePath = directory + "/" + ID + ".txt";  //login한 user의 file 경로
 	File user = new File(filePath);

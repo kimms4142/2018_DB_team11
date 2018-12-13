@@ -7,10 +7,15 @@
 	
 	String ID = request.getParameter("ID");
 	String PW = request.getParameter("PW");
+	String name = request.getParameter("name");
+	String birth = request.getParameter("birth");
+	String address = request.getParameter("address");
+	String tel = request.getParameter("tel");
+	
 	String POINT = "0";
 	
 	signup Signup = new signup();
-	Signup.register(ID, PW);
+	Signup.register(ID, PW, name, birth, address, tel);
 	
 	String directory = application.getRealPath("users");  //고객들의 파일들을 저장시킬 디렉토리
 	File dir = new File(directory);
