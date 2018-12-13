@@ -6,6 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import com.mysql.jdbc.Statement;
+
 public class point {
 
 	String jdbcUrl;
@@ -46,6 +48,7 @@ public class point {
 			} catch (SQLException sqle) {
 			}
 	}
+
 	public boolean pointUp(String id) {
 		connectDB();
 		String sql = "UPDATE member SET point = point+100 WHERE id = ?";
@@ -62,18 +65,19 @@ public class point {
 		disConnectDB();
 		return true;
 	}
+
 	public boolean pointInfo(String id) {
 		connectDB();
 		String sql = "SELECT point FROM member";
-		
 		try {
 			pstmt = conn.prepareStatement(sql);
-			pstmt.executeLargeUpdate();
-			
-		}catch(SQLException e) {
+			rs = pstmt.executeQuery(sql);
+			System.out.println(rs.getString(1));
+		} catch (SQLException e) {
 			e.printStackTrace();
 			return false;
 		}
+
 		disConnectDB();
 		return true;
 	}

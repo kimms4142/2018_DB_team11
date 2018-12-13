@@ -16,3 +16,7 @@
 	theater.register(name, address, tel, room, seatnum);
 	
 %>
+<script>
+	alert("입력되었습니다..");
+	location.href="admin.jsp";	// 처음 페이지로 이동
+</script>
