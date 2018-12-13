@@ -36,7 +36,7 @@ public class signup {
 		if(conn != null) try{conn.close();}catch(SQLException sqle){}
 	}
 	
-	//È¸¿ø µî·Ï
+	//È¸ï¿½ï¿½ ï¿½ï¿½ï¿½
 	public boolean register(String id, String pw, String name, String birth, String address, String tel) {
 	       connectDB();
 	       String  sql = "INSERT INTO member VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
@@ -49,10 +49,10 @@ public class signup {
 	          pstmt.setString(4, birth);
 	          pstmt.setString(5, address);
 	          pstmt.setString(6, tel);
-	          pstmt.setString(7, "°í°´"); // È¸¿ø ÀÎÁö °ü¸®ÀÚÀÎÁö
-	          pstmt.setString(8, "Á¤È¸¿ø"); //È¸¿ø µî±Þ
-	          pstmt.setInt(9,0); //Æ÷ÀÎÆ°
-	          pstmt.setInt(10, 0); //°ü¶÷ È½¼ö
+	          pstmt.setString(7, "ï¿½ï¿½"); // È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	          pstmt.setString(8, "ï¿½ï¿½È¸ï¿½ï¿½"); //È¸ï¿½ï¿½ ï¿½ï¿½ï¿½
+	          pstmt.setInt(9,0); //ï¿½ï¿½ï¿½ï¿½Æ°
+	          pstmt.setInt(10, 0); //ï¿½ï¿½ï¿½ï¿½ È½ï¿½ï¿½
 	          
 	          
 	          pstmt.executeUpdate();
@@ -65,7 +65,7 @@ public class signup {
 	       return true;
 	    }
 	 
-	//¾ÆÀÌµð, ºñ¹Ð¹øÈ£ °Ë»ç
+	//ï¿½ï¿½ï¿½Ìµï¿½, ï¿½ï¿½Ð¹ï¿½È£ ï¿½Ë»ï¿½
 	public boolean check(String id, String pw) {
 		connectDB();
 		String sql = "SELECT * FROM member WHERE (id = ?) and (pw = ?)";
@@ -112,21 +112,13 @@ public class signup {
 	
 	public void remove(String id) {
 		connectDB();
-		String sql = "alter table member drop primary key";
+		String sql = "delete from member where id = ?";
+		
 		try{
 			pstmt = conn.prepareStatement(sql);
-			pstmt.executeQuery();
-		}
-		catch(SQLException e) {
-			e.printStackTrace();
-		}
-		sql = "alter table member drop ?";
-		try{
-			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1,  id);
+			pstmt.setString(1, id);
 			pstmt.executeUpdate();
-		}
-		catch(SQLException e) {
+		}catch(SQLException e) {
 			e.printStackTrace();
 		}
 		disConnectDB();
