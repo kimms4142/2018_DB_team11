@@ -1,14 +1,19 @@
 <%@ page language="java"  pageEncoding="EUC-KR"%>
 <%@ page import="java.sql.*" contentType="text/html;charset=euc-kr"%>
+<%@ page import="ms.signup" %>
 <%
+<<<<<<< HEAD
 	request.setCharacterEncoding("UTF-8");
 	
+=======
+
+>>>>>>> 85adf06905b45846d38f2e95b769d0b96395635a
 	try {
-		String DB_URL = "jdbc:oracle:thin:@127.0.0.1:1521:DBSERVER";
-		String DB_USER = "KIM";
-		String DB_PASSWORD = "DBSERVER";
+		String DB_URL = "jdbc:mysql:http://localhost:8090/2018_DB_team11/moviebooking.jsp";
+		String DB_USER = "kimms4142";
+		String DB_PASSWORD = "kimms4142";
 		
-	 	Class.forName("oracle.jdbc.driver.OracleDriver");
+	 	Class.forName("com.mysql.jdbc.Driver");
  	
 
 		Connection conn = null;
@@ -19,6 +24,7 @@
 		String query = "select * from point_admin where state='before'";
 		stmt = conn.createStatement();
 		rs = stmt.executeQuery(query);
+	
 		
 		int num = 0;
 		while(rs.next())
