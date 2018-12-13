@@ -36,7 +36,7 @@ public class signup {
 		if(conn != null) try{conn.close();}catch(SQLException sqle){}
 	}
 	
-	//ȸ�� ���
+	//회원 등록
 	public boolean register(String id, String pw, String name, String birth, String address, String tel) {
 	       connectDB();
 	       String  sql = "INSERT INTO member VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
@@ -65,7 +65,7 @@ public class signup {
 	       return true;
 	    }
 	 
-	//���̵�, ��й�ȣ �˻�
+	//회원 검사
 	public boolean check(String id, String pw) {
 		connectDB();
 		String sql = "SELECT * FROM member WHERE (id = ?) and (pw = ?)";

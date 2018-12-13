@@ -18,7 +18,7 @@
 			영화 actor : <input type="text" name="actor"><br/>
 			영화 등급 : <input type="text" name="type"><br/>
 			영화 정보 : <input type="text" name="info"><br/>
-			<input type="submit" value="수정">
+			<input class="btn" type="submit" value="수정">
 		</form>
 	</div>
 </body>

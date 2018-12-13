@@ -18,6 +18,11 @@
 	theater.modify(name, address, tel, room, seatnum);
 %>
 <script>
+<<<<<<< HEAD
 	alert("입력되었습니다..");
 	location.href = "admin.jsp"; // 처음 페이지로 이동
+=======
+	alert("수정되었습니다.");
+	location.href="admin.jsp";	// 처음 페이지로 이동
+>>>>>>> 8ca92b37073d853b5ca143166214b776da4fe179
 </script>
