@@ -15,8 +15,7 @@
 	
 	signup Signup = new signup();
 	Signup.register(ID, PW, name, birth, address, tel);
-	
-	response.setHeader("Refresh", "0; URL=start.jsp");  //start.jsp로 이동 
-	
+
+	response.sendRedirect("start.jsp");
 	
 %>

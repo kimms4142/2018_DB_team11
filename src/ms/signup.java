@@ -49,10 +49,10 @@ public class signup {
 	          pstmt.setString(4, birth);
 	          pstmt.setString(5, address);
 	          pstmt.setString(6, tel);
-	          pstmt.setString(7, "��"); // ȸ�� ���� ����������
-	          pstmt.setString(8, "��ȸ��"); //ȸ�� ���
-	          pstmt.setInt(9,0); //����ư
-	          pstmt.setInt(10, 0); //���� Ƚ��
+	          pstmt.setString(7, "고객");
+	          pstmt.setString(8, "정회원"); //회원 등급
+	          pstmt.setInt(9,0); //포인트 점수
+	          pstmt.setInt(10, 0); //관람 횟수
 	          
 	          
 	          pstmt.executeUpdate();
