@@ -15,8 +15,6 @@
 			영화관 이름 : <input type="text" name="name"><br/>
 			영화관 주소 : <input type="text" name="address"><br/>
 			전화번호 : <input type="text" name="tel"><br/>
-			상영관 : <input type="text" name="room"><br/>
-			좌석 수 : <input type="text" name="seatnum"><br/>
 			<input type="submit" value="수정" class="btn">
 		</form>
 	</div>

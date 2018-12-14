@@ -47,17 +47,15 @@ public class theater {
 			}
 	}
 	
-	public boolean register(String name, String address, String tel, String room, String seatnum) {
+	public boolean register(String name, String address, String tel) {
 		 connectDB();
-	       String  sql = "INSERT INTO theater VALUES (?, ?, ?, ?, ?)";
+	       String  sql = "INSERT INTO theater VALUES (?, ?, ?)";
 	       
 	       try {
 	          pstmt = conn.prepareStatement(sql);
 	          pstmt.setString(1, name);
 	          pstmt.setString(2, address);
-	          pstmt.setString(3, tel);
-	          pstmt.setString(4, room);
-	          pstmt.setString(5, seatnum);    
+	          pstmt.setString(3, tel);  
 	          pstmt.executeUpdate();
 	       } catch (SQLException e) {
 	          e.printStackTrace();
@@ -69,17 +67,15 @@ public class theater {
 	}
 
 	
-	public boolean modify(String name, String address, String tel, String room, String seatnum) {
+	public boolean modify(String name, String address, String tel) {
 		 connectDB();
-	       String  sql = "UPDATE theater SET address = ?, tel = ?, room = ?, seatnum = ? WHERE t_name = ?";
+	       String  sql = "UPDATE theater SET address = ?, tel = ? WHERE t_name = ?";
 	       
 	       try {
 	          pstmt = conn.prepareStatement(sql);
 	          pstmt.setString(1, address);
 	          pstmt.setString(2, tel);
-	          pstmt.setString(3, room);
-	          pstmt.setString(4, seatnum);
-	          pstmt.setString(5, name);    
+	          pstmt.setString(3, name);    
 	          pstmt.executeUpdate();
 	       } catch (SQLException e) {
 	          e.printStackTrace();
