@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
-<%@ page import "ms.pay" %>
+<%@ page import="ms.pay" %>
+<%@ page import="java.util.Calendar" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html> 
 <head> 
@@ -9,7 +11,16 @@
 </head> 
 <body> 
  
- <%String ID = (String)session.getAttribute("ID"); %>
+ <%String ID = (String)session.getAttribute("ID"); 
+   request.setCharacterEncoding("UTF-8");
+   String kind = request.getParameter("kind");
+   String way = request.getParameter("way");
+   String date = request.getParameter("date");
+   
+   
+   pay Pay = new pay();
+   Pay.ticket(kind, way, date);  %>
+   
  <form action="store.jsp" method="post">
   <table style="border-collapse:collapse;" cellpadding="10px" rules="rows" frame="hsides"> 
 	  <tr> 
