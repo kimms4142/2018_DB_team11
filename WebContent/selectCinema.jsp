@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-<%@page contentType="text/html; charset=UTF-8"%>
-<%@page import="java.io.*"%>
-<%@page import="ms.movie"%>
-
-<%
-	request.setCharacterEncoding("UTF-8");
-	
-	/* session에 저장되어있는 ID와 POINT 값을 읽어서 변수에 저장 - 아래 html 코드에서 사용 */
-
-	String ID = (String) session.getAttribute("ID");
-	String POINT = (String) session.getAttribute("POINT");
-	movie Movie = new movie();
-	Movie.getmovieInformation(ID);
-	
-%>
 <%@ page  contentType="text/html;charset=UTF-8" 
 	        import="java.sql.DriverManager,
 	                   java.sql.Connection,
@@ -22,7 +6,8 @@
 	                   java.sql.SQLException" %>
 	<%
 	/* session에 저장되어있는 ID와 POINT 값을 읽어서 변수에 저장 - 아래 html 코드에서 사용 */
-	  
+	  String ID = (String) session.getAttribute("ID");
+	  String POINT = (String) session.getAttribute("POINT");
 	  response.setContentType("text/html;charset=utf-8;");
 	  request.setCharacterEncoding("utf-8");     //charset, Encoding 설정
 
@@ -42,9 +27,10 @@
 	      conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
 	      stmt = conn.createStatement();
 
-	      String query = "SELECT id, name, director, actor, type, info FROM movie";
+	      String query = "SELECT c_name, time, seatnum FROM cinema";
 	      rs = stmt.executeQuery(query);
 	 %>
+
 
 	</DOCTYPE html>
 	<html>
@@ -61,27 +47,22 @@
 
 			
 					<div class="movie_room">
-					<form action="selectTheater.jsp" method="post">
+					<form action="selectDate.jsp" method="post">
 						<table border="1" cellspacing="0">
 						<tr>
-						<td>영화 id</td>
-						<td>영화 이름</td>
-						<td>감독</td>
-						<td>출연</td>
-						<td>등급</td>
-						<td>주요 정보</td>
+						<td>상영관 이름</td>
+						<td>상영 시간</td>
+						<td>좌석</td>
+						
 						<th></th>
 						</tr>
 						<%
 						    while(rs.next()) { //rs 를 통해 테이블 객체들의 필드값을 넘겨볼 수 있다.
 						%><tr>
-						<td><%=rs.getString("id")%></td>
-						<td><%=rs.getString("name")%></td>
-						<td><%=rs.getString("director")%></td>
-						<td><%=rs.getString("actor")%></td>
-						<td><%=rs.getString("type")%></td>
-						<td><%=rs.getString("info")%></td>
-						<td><a href="selectTheater.jsp">선택</a>
+						<td><%=rs.getString(1)%></td>
+						<td><%=rs.getString(2)%></td>
+						<td><%=rs.getString("seatnum")%></td>
+						<td><a href="selectDate.jsp">선택</a>
 						</td>
 						</tr>
 						<%
@@ -97,6 +78,7 @@
 						      out.println("err:"+e.toString());
 						} 
 						%>
+
 					</div>
 		
 			<div id="rightContent">

@@ -25,19 +25,16 @@
       conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
       stmt = conn.createStatement();
 
-      String query = "SELECT id, name, director, actor, type, info FROM movie";
+      String query = "SELECT t_name, address, tel FROM theater";
       rs = stmt.executeQuery(query);
  %>
-
-<form action="selectTheater.jsp" method="post">
+<h2>영화관 선택</h2>
+<form action="addCinemaForm.jsp" method="post">
 <table border="1" cellspacing="0">
 <tr>
-<td>영화 id</td>
-<td>영화 이름</td>
-<td>감독</td>
-<td>출연</td>
-<td>등급</td>
-<td>주요 정보</td>
+<td>영화관 이름</td>
+<td>영화관 주소</td>
+<td>영화관 전화번호</td>
 <th></th>
 </tr>
 <%
@@ -45,11 +42,9 @@
 %><tr>
 <td><%=rs.getString(1)%></td>
 <td><%=rs.getString(2)%></td>
-<td><%=rs.getString("director")%></td>
-<td><%=rs.getString("actor")%></td>
-<td><%=rs.getString("type")%></td>
-<td><%=rs.getString("info")%></td>
-<td><a href="selectTheater.jsp">선택</a>
+<td><%=rs.getString("tel")%></td>
+
+<td><a href="addCinemaForm.jsp">선택</a>
 </td>
 </tr>
 <%

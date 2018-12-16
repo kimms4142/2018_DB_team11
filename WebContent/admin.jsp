@@ -59,6 +59,7 @@ input {
 			<li><a href="addTheaterForm.jsp"><h2>영화관 추가</h2></a></li>
 			<li><a href="modifyTheaterForm.jsp"><h2>영화관 수정</h2></a></li>
 			<li><a href="deleteTheaterForm.jsp"><h2>영화관 삭제</h2></a></li>
+			<li><a href="addCinemaForm.jsp"><h2>상영관 추가</h2></a></li>
 		</ul>
 		
 		<li><a href="pointInfo.jsp"><h1>포인트 조회</h1></a></li>

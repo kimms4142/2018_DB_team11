@@ -9,14 +9,14 @@
 	String name = request.getParameter("name");
 	String address = request.getParameter("address");
 	String tel = request.getParameter("tel");
-	String room = request.getParameter("room");
-	String seatnum = request.getParameter("seatnum");
+
 	
 	theater theater = new theater();
-	theater.register(name, address, tel, room, seatnum);
+	theater.register(name, address, tel);
 	
 %>
 <script>
+
 	alert("추가되었습니다.");
 	location.href="admin.jsp";	// 처음 페이지로 이동
 </script>
