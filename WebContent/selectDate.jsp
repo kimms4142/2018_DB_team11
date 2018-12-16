@@ -8,6 +8,7 @@
 	/* session에 저장되어있는 ID와 POINT 값을 읽어서 변수에 저장 - 아래 html 코드에서 사용 */
 	  String ID = (String) session.getAttribute("ID");
 	  String POINT = (String) session.getAttribute("POINT");
+	  String t_name =request.getParameter("sel");
 	  response.setContentType("text/html;charset=utf-8;");
 	  request.setCharacterEncoding("utf-8");     //charset, Encoding 설정
 	 %>
@@ -36,7 +37,7 @@
 						</tr>
 
 						<td><input type="date"></td>
-						<td><a href="selectCinema.jsp">선택</a>
+						<td><a href="selectCinema.jsp?sel=t_name">선택</a>
 						</td>
 						</tr>
 						</table>

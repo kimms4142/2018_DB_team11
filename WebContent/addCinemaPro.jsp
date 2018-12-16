@@ -6,12 +6,13 @@
 <% request.setCharacterEncoding("euc-kr"); %>    
 
 <%
+	String t_name = request.getParameter("t_name");
 	String c_name = request.getParameter("c_name");
 	String time = request.getParameter("time");
 	String seatnum = request.getParameter("seatnum");
 	
 	cinema cinema = new cinema();
-	cinema.register(c_name, time, seatnum);
+	cinema.register(t_name, c_name, time, seatnum);
 	
 %>
 <script>

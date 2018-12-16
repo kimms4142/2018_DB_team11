@@ -18,16 +18,15 @@
 
 	  String DB_USER = "kimms4142";
 	  String DB_PASSWORD= "kimms4142";
-
+	  String t_name =request.getParameter("sel");
 	  Connection conn= null;
 	  Statement stmt = null;
 	  ResultSet rs   = null;
-
 	  try {
 	      conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
 	      stmt = conn.createStatement();
 
-	      String query = "SELECT c_name, time, seatnum FROM cinema";
+	      String query = "SELECT c_name, time, seatnum FROM cinema where t_name = '" + request.getParameter("sel")+"'";
 	      rs = stmt.executeQuery(query);
 	 %>
 
@@ -50,15 +49,17 @@
 					<form action="selectDate.jsp" method="post">
 						<table border="1" cellspacing="0">
 						<tr>
+						<td>날짜 선택</td>
 						<td>상영관 이름</td>
 						<td>상영 시간</td>
-						<td>좌석</td>
+						<td>좌석+<%= t_name %></td>
 						
 						<th></th>
 						</tr>
 						<%
 						    while(rs.next()) { //rs 를 통해 테이블 객체들의 필드값을 넘겨볼 수 있다.
 						%><tr>
+						<td><input type="date"></td>
 						<td><%=rs.getString(1)%></td>
 						<td><%=rs.getString(2)%></td>
 						<td><%=rs.getString("seatnum")%></td>

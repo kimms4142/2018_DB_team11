@@ -46,15 +46,16 @@ public class cinema {
 			}catch(SQLException sqle){
 			}
 	}
-	public boolean register(String c_name, String time, String seatnum) {
+	public boolean register(String t_name, String c_name, String time, String seatnum) {
 		 connectDB();
-	       String  sql = "INSERT INTO cinema VALUES (?, ?, ?)";
+	       String  sql = "INSERT INTO cinema VALUES (?, ?, ?, ?)";
 	       
 	       try {
 	          pstmt = conn.prepareStatement(sql);
-	          pstmt.setString(1, c_name);
-	          pstmt.setString(2, time);
-	          pstmt.setString(3, seatnum); 
+	          pstmt.setString(1, t_name);
+	          pstmt.setString(2, c_name);
+	          pstmt.setString(3, time);
+	          pstmt.setString(4, seatnum); 
 	          pstmt.executeUpdate();
 	       } catch (SQLException e) {
 	          e.printStackTrace();

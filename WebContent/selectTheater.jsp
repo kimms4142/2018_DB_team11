@@ -47,7 +47,7 @@
 
 			
 					<div class="movie_room">
-					<form action="selectDate.jsp" method="post">
+					<form action="selectCinema.jsp" method="post">
 						<table border="1" cellspacing="0">
 						<tr>
 						<td>영화관 이름</td>
@@ -62,7 +62,7 @@
 						<td><%=rs.getString(1)%></td>
 						<td><%=rs.getString(2)%></td>
 						<td><%=rs.getString("tel")%></td>
-						<td><a href="selectDate.jsp">선택</a>
+						<td><a href="selectCinema.jsp?sel=<%=rs.getString(1)%>">선택</a>
 						</td>
 						</tr>
 						<%
