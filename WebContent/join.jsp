@@ -10,15 +10,15 @@
 </head>
 <body>
 	<div id="form">
-		<a href="start.jsp"><img src="home.png" alt="home"/></a>
+		<a href="start.jsp"><img src="home.png" alt="home"/></a><br><br>
 		
 		<form action="회원가입.jsp" method="post">
-			I D : <input type="text" 	 name="ID" required><br>
-			P W : <input type="password" name="PW" required><br>
-			이 름 : <input type="text" 	 name="name" required><br>
-			생년월일 : <input type="date"   name="birth" required><br>
-			주 소 : <input type="text" 	 name="address" required><br>
-			전화번호 : <input type="text"   name="tel" required><br>
+			<label>I D : </label><input type="text" size="20" name="ID" required><br>
+			<label>P W : </label><input type="password" size="20" name="PW" required><br>
+			<label>이 름 : </label><input type="text" size="20"	 name="name" required><br>
+			<label>생년월일 : </label><input type="date" size="20"  name="birth" required><br>
+			<label>주 소 : </label><input type="text" size="20"	 name="address" required><br>
+			<label>전화번호 : </label><input type="text" size="20"  name="tel" required><br>
 			
 			<input id="btn" type="submit" value="가입">
 		</form>

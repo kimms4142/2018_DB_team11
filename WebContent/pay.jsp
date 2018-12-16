@@ -16,19 +16,18 @@
       <form action="pay.jsp">
       <h2>결제 유형</h2><br>
       <label>현장 결제</label><input type="radio" name="kind" value="offline">
-      <label>인터넷 결제</label><input type="radio" name="kind" value="online"><br>
+      <label>온라인 결제</label><input type="radio" name="kind" value="online"><br>
       
       <h2>결제 방법</h2>
-      <label>현장 결제</label><input type="radio" name="way" value="cash" id="cash">
+      <label>현금 결제</label><input type="radio" name="way" value="cash" id="cash">
       <label>포인트 결제</label><input type="radio" name="way" value="point" id="point"><br>
       
       <h2>결제 일자</h2>
       <input type="date" id="now_date" name="date"><br>
       <script>document.getElementById("now_date").valueAsDate = new Date();</script>
       
-      <h2>포인트</h2>
-      <input type="number" id="point" value="point" name="point" min=1000><br><br>
-      <input type="submit" value="결제하기">
+      <input type="submit" value="결제하러 가기">
+      
       </form>
    </div>
 
@@ -38,10 +37,9 @@
    String way = request.getParameter("way");
    String date = request.getParameter("date");
    
-   String point = request.getParameter("point");
    
    pay Pay = new pay();
-   Pay.ticket(kind, way, date, point);  
+   Pay.ticket(kind, way, date);  
     
 %>
 

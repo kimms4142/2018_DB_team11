@@ -23,5 +23,12 @@ input {
 	color: white;
 	border-radius: 5px;
 	background-color: #66c2ff;
-	margin-top: 20px;
+}
+
+body{
+	font-weight: bold;
+}
+label{
+	float: left;
+	margin:10px;
 }

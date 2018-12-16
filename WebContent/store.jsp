@@ -1,69 +1,16 @@
 <%@page contentType="text/html; charset=UTF-8"%>
 <%@page import="java.io.*"%>
+<%@page import="ms.movie"%>
 
 <%
 	request.setCharacterEncoding("UTF-8");
 	
 	/* session에 저장되어있는 ID와 POINT 값을 읽어서 변수에 저장 - 아래 html 코드에서 사용 */
 	String ID = (String) session.getAttribute("ID");
-	String POINT = (String) session.getAttribute("POINT");
 	
+	movie Movie = new movie();
+	Movie.getmovieInformation(ID);
 	
-	/* 각 product들의 정보들이 저장되어 있는 txt파일 경로 */	
-	String directory = application.getRealPath("product");
-	String filePath1 = directory + "/movie1.txt";
-	String filePath2 = directory + "/movie2.txt";
-	String filePath3 = directory + "/movie3.txt";
-	String filePath4 = directory + "/movie4.txt";
-
-	BufferedReader reader = null;
-	
-	String price="";
-	// 영화 코드 / 영화 명 / 영화 설명 / 가격 / 수량 / 이미지
-	
-	reader = new BufferedReader(new InputStreamReader(new FileInputStream(filePath1),"euc-kr"));
-	String code1 = reader.readLine();
-	String name1 = reader.readLine();
-	String content1 = reader.readLine();
-	price = reader.readLine();
-	int price1 = Integer.parseInt(price);
-	String number = reader.readLine();
-	int number1 = Integer.parseInt(number);
-	String img1 = reader.readLine();
-	
-	price="";
-	reader = new BufferedReader(new InputStreamReader(new FileInputStream(filePath2),"euc-kr"));
-	String code2 = reader.readLine();
-	String name2 = reader.readLine();
-	String content2 = reader.readLine();
-	price = reader.readLine();
-	int price2 = Integer.parseInt(price);
-	number = reader.readLine();
-	int number2 = Integer.parseInt(number);
-	String img2 = reader.readLine();
-	
-	price="";
-	reader = new BufferedReader(new InputStreamReader(new FileInputStream(filePath3),"euc-kr"));
-	String code3 = reader.readLine();
-	String name3 = reader.readLine();
-	String content3 = reader.readLine();
-	price = reader.readLine();
-	int price3 = Integer.parseInt(price);
-	number = reader.readLine();
-	int number3 = Integer.parseInt(number);
-	String img3 = reader.readLine();
-	
-	price="";
-	reader = new BufferedReader(new InputStreamReader(new FileInputStream(filePath4),"euc-kr"));
-	String code4 = reader.readLine();
-	String name4 = reader.readLine();
-	String content4 = reader.readLine();
-	price = reader.readLine();
-	int price4 = Integer.parseInt(price);
-	number = reader.readLine();
-	int number4 = Integer.parseInt(number);
-	String img4 = reader.readLine();
-	reader.close();
 %>
 
 </DOCTYPE html>
