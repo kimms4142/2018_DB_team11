@@ -6,7 +6,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+
 public class movie {
+	
+	String name,director,actor,type,info;
 
 	String jdbcUrl;
 	String dbId;
@@ -106,4 +109,73 @@ public class movie {
 		disConnectDB();
 		return true;
 	}
+	
+	public movie getmovieInformation(String movie_id) {
+		connectDB();
+		String sql = "SELECT * FROM movie WHERE movie_id = ?";
+		movie movie_Info = null;
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, movie_id);
+			rs = pstmt.executeQuery();
+			
+			if(!rs.next()) {
+				return null;
+			}
+			
+			
+			movie_Info = new movie();
+			movie_Info.setname(rs.getString("name"));
+			movie_Info.setdirector(rs.getString("director"));
+			movie_Info.setactor(rs.getString("actor"));
+			movie_Info.settype(rs.getString("type"));
+			movie_Info.setinfo(rs.getString("info"));
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		disConnectDB();
+		
+		return movie_Info;
+	}
+
+	
+
+	
+
+	
+	private void setname(String name) {
+		this.name = name;
+	}
+	public String getname() {
+		return name;
+	}
+	private void setdirector(String director) {
+		this.director = director;
+	}
+	public String getdirector() {
+		return director;
+	}
+
+	private void setactor(String actor) {
+		this.actor = actor;
+	}
+	private String getactor() {
+		return actor;
+	}
+	
+	private void settype(String type) {
+		this.type = type;
+	}
+	public String gettype() {
+		return type;
+	}
+	private void setinfo(String info) {
+		this.info = info;
+	}
+	private String getinfo() {
+		return info;
+	}
+
 }

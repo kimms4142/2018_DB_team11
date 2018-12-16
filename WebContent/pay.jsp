@@ -13,35 +13,29 @@
 
 <h1>결제 페이지</h1>
    <div>
-      <form action="pay.jsp">
-      <h2>결제 유형</h2><br>
-      <label>현장 결제</label><input type="radio" name="kind" value="offline">
-      <label>인터넷 결제</label><input type="radio" name="kind" value="online"><br>
-      
+      <form action="OnlineReserve.jsp">
+      <h2>결제 유형</h2>
+      <label>온라인 결제</label><input type="radio" name="kind" value="online" required>
+      <label>현장 결제</label><input type="radio" name="kind" value="offline" required>
       <h2>결제 방법</h2>
-      <label>현장 결제</label><input type="radio" name="way" value="cash" id="cash">
-      <label>포인트 결제</label><input type="radio" name="way" value="point" id="point"><br>
+      <label>현금 결제</label><input type="radio" name="way" value="cash" id="cash" required>
+      <label>포인트 결제</label><input type="radio" name="way" value="point" id="point" required><br>
       
       <h2>결제 일자</h2>
-      <input type="date" id="now_date" name="date"><br>
+      <input type="date" id="now_date" name="date"><br><br>
       <script>document.getElementById("now_date").valueAsDate = new Date();</script>
       
-      <h2>포인트</h2>
-      <input type="number" id="point" value="point" name="point" min=1000><br><br>
-      <input type="submit" value="결제하기">
+      <input type="submit" value="결제하러 가기">
+      
       </form>
+      
+      </form>
+        
    </div>
+   
 
 <%
-   request.setCharacterEncoding("UTF-8");
-   String kind = request.getParameter("kind");
-   String way = request.getParameter("way");
-   String date = request.getParameter("date");
-   
-   String point = request.getParameter("point");
-   
-   pay Pay = new pay();
-   Pay.ticket(kind, way, date, point);  
+
     
 %>
 
